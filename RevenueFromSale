@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class RevenueFromSale {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+            System.out.print("Enter unit price: ");
+            double price = input.nextDouble();
+            System.out.print("Enter quantity: ");
+            int quantity = input.nextInt();
+
+        double priceWithoutDiscount  = price * quantity;
+        double discountPercentage = 0.0;
+        double finalPrice = priceWithoutDiscount;
+
+        if (quantity >= 100 & quantity <=120) {
+discountPercentage = priceWithoutDiscount * 0.15;
+
+//System.out.println("The revenue from sale: " + (priceWithoutDiscount - (priceWithoutDiscount / discountPercentage));
+//System.out.println("Discount: " + priceWithoutDiscount / discountPercentage);
+        }
+        else if (quantity > 120) {
+
+            discountPercentage = priceWithoutDiscount * 0.20;
+            //System.out.println("The revenue from sale: " + (priceWithoutDiscount - (priceWithoutDiscount / secondDiscountPercentage) + "$" );
+            //System.out.println("Discount: " + priceWithoutDiscount / secondDiscountPercentagePercentage) + "$");
+        }
+        finalPrice = priceWithoutDiscount - discountPercentage;
+
+            System.out.printf("The revenue from sale: %.2f$\n", finalPrice);
+            System.out.printf("Discount: %.2f$ (%.1f%%)\n) ", discountPercentage, (discountPercentage / priceWithoutDiscount) * 100);
+
+            input.close();
+       }
+    }
+
