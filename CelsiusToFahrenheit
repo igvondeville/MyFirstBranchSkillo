@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class CelsiusToFahrenheit {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter the temperature: ");
+        double temperature = input.nextDouble();
+
+        System.out.print("Please enter the type of temperature: ");
+        String type = input.next();
+
+        if (type.equalsIgnoreCase("Celsius")) {
+            temperature = (temperature * 9/5) + 32;
+            type = "Fahrenheit";
+        }
+        else if (type.equalsIgnoreCase("Fahrenheit")) {
+            temperature = (temperature - 32) * 5/9;
+        }
+
+        System.out.printf("The temperature is %.2f %s%n", temperature, type);
+
+
+    }
+}
