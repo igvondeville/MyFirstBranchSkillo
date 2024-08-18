@@ -7,8 +7,6 @@ public class LargestNum {
                 largestNum = num;
                 System.out.println("The largest num is " + largestNum);
             }
-
                 }
             }
         }
-
