@@ -1,20 +1,17 @@
-import java.util.ArrayList;
+public class BiggestElement {
+    public static void main(String[] args) {
+        int[] num = {77, 98, 0, 24, 177, 77};
 
-public class biggestElement {
-    public static int main(int[] args) {
-        ArrayList<Integer> listNum = new ArrayList<Integer>();
-        listNum.add(101);
-        listNum.add(25);
-        listNum.add(31);
-        listNum.add(45);
-        listNum.add(60);
-        listNum.add(75);
+        int biggest = findBiggest(num);
+        System.out.println("The biggest element in the array is: " + biggest);
 
-        int biggest = listNum.get(0);
+    }
 
-        for (int i = 1; i < listNum.size(); i++) {
-            if (listNum.get(i) > listNum.get(biggest)) {
-                biggest = listNum.get(i);
+    public static int findBiggest(int[] array) {
+        int biggest = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > biggest) {
+                biggest = array[i];
             }
         }
         return biggest;
