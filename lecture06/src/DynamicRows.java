@@ -17,7 +17,10 @@ public class DynamicRows {
         int[][] matrix = new int[rows][columns];
 
         for (int row = 0; row < rows; row++) {
-            System.out.println("Row: " + matrix[row]);
+            for (int column = 0; column < columns; column++) {
+                System.out.print(matrix[row][column] + " ");
+            }
+            System.out.println();
         }
     }
 }
