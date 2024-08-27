@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class daysOfTheWeek {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int digit = scanner.nextInt();
+
+        String[] daysOfweek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+        if (digit >= 1 && digit <= 7) {
+            String suffix;
+            switch (digit) {
+                case 1:
+                    suffix = "st";
+                    break;
+                case 2:
+                    suffix = "nd";
+                    break;
+                case 3:
+                    suffix = "rd";
+                    break;
+                default:
+                    suffix = "th";
+                    break;
+
+            }
+
+            System.out.println("The " + digit + suffix + " day of the week is " + daysOfweek[digit - 1] + ".");
+        }
+        else {
+            System.out.println("Invalid input. Please enter a digit between 1 and 7.");
+        }
+
+        scanner.close();
+    }
+}

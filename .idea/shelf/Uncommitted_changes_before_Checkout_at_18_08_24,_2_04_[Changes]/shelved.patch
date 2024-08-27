@@ -1,0 +1,25 @@
+Index: lecture04/Exercises.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\npublic class Exercises {\n    public static void main(String[] args) {\nhomework();\n    }\n    public static void homework() {\n        int [] num = {55, 74, 99, 103, 23};\n        for (int num1 : num) {\n            System.out.println( \"number: \" + num1);\n        }\n    }\n}
+===================================================================
+diff --git a/lecture04/Exercises.java b/lecture04/Exercises.java
+--- a/lecture04/Exercises.java	
++++ b/lecture04/Exercises.java	
+@@ -1,12 +1,12 @@
+ 
+ public class Exercises {
+     public static void main(String[] args) {
+-homework();
++        homework();
+     }
+     public static void homework() {
+-        int [] num = {55, 74, 99, 103, 23};
++        int[] num = {55, 74, 99, 103, 23};
+         for (int num1 : num) {
+-            System.out.println( "number: " + num1);
++            System.out.println("number: " + num1);
+         }
+     }
+ }
+\ No newline at end of file

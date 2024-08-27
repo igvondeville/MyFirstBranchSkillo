@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class SecondHomework {
+    public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+     System.out.println("Enter the first angle: ");
+     int firstAngle = scanner.nextInt();
+     System.out.println("Enter the second angle: ");
+     int secondAngle = scanner.nextInt();
+     System.out.println("Enter the third angle: ");
+     int thirdAngle = scanner.nextInt();
+
+     if (firstAngle + secondAngle + thirdAngle != 180) {
+         System.out.println("The triangle can't be built based on the angle values. ");
+     }
+     else {
+         if (firstAngle == 90 || secondAngle == 90 || thirdAngle == 90) {
+         System.out.println("The triangle can be built. It is a right-angled triangle. ");
+        }
+         else if (firstAngle > 90 || secondAngle > 90 || thirdAngle > 90) {
+         System.out.println("The triangle can be built. It is an obtuse triangle. ");
+         }
+         else {
+         System.out.println("The triangle can be built. It is an acute triangle. ");
+         }
+         if (firstAngle == secondAngle && secondAngle == thirdAngle) {
+             System.out.println("It is also an equilateral triangle. ");
+         }
+         else if (firstAngle == secondAngle || secondAngle == thirdAngle || firstAngle == thirdAngle) {
+             System.out.println("It is also an isosceles triangle. ");
+         }
+         else {
+             System.out.println("It is also scalene triangle. ");
+         }
+         scanner.close();
+     }
+     }
+    }
+
