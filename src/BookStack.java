@@ -13,8 +13,8 @@ public class BookStack {
        while (!stack.isEmpty()) {
            System.out.println("Removed book: " + stack.pop());
        }
-if (stack.isEmpty()) {
+
     System.out.println("All books have been read. Great job! ");
-}
+
        }
     }
